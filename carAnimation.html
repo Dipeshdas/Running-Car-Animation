@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="car.css">
+    <script src="script.js"></script>
+    
+    <title>Car animation</title>
+</head>
+<style>
+    @media only screen and (min-width:1000px) and (max-width:1281px) {
+        .back-wheel {
+            left: -17vh;
+            position: absolute;
+        }
+        
+    }
+    
+    @media only screen and (max-width:376px){
+        .car {
+            width: 270px;
+            left: 35%;
+            bottom: 17vh;
+            transform: translateX(-51%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel img {
+            width: 55px;
+            height: 55px;
+            animation: wheel 1s linear infinite;
+        }
+
+        .front-wheel {
+            left: 10.5vh;
+            position: absolute;
+        }
+
+        .highway{
+            height:200px;
+            width: 1000%;
+            display: block;
+            background-image: url(road.jpg);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            /* background-repeat: repeat-X; */
+            animation:highway 1.5s linear infinite;
+        }
+        @keyframes highway {
+            100%{
+                transform: translateX(-2400px);
+            }
+        }
+        
+    }
+    @media only screen and (min-width:377px) and (max-width:550px){
+        .car {
+            width: 233px;
+            left: 42%;
+            bottom: 16vh;
+            transform: translateX(-51%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel {
+            left: 52%;
+            bottom: 22vh;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel img {
+            width: 45px;
+            height: 45px;
+            animation: wheel 1s linear infinite;
+        }
+
+        .back-wheel {
+            left: -12vh;
+            position: absolute;
+        }
+
+        .front-wheel {
+            left: 7.8vh;
+            position: absolute;
+        }
+
+        .highway{
+            height:200px;
+            width: 1000%;
+            display: block;
+            background-image: url(road.jpg);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            /* background-repeat: repeat-X; */
+            animation:highway 1.5s linear infinite;
+        }
+        @keyframes highway {
+            100%{
+                transform: translateX(-2400px);
+            }
+        }
+        
+    }
+    @media only screen and (min-width:700px) and (max-width:950px){
+
+        .car {
+            width: 408px;
+            left: 39%;
+            bottom: 11vh;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel {
+            left: 50%;
+            bottom: 19vh;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel img {
+            width: 80px;
+            height: 80px;
+            animation: wheel 1s linear infinite;
+        }
+        .back-wheel {
+            left: -17vh;
+            position: absolute;
+        }
+        .front-wheel {
+            left: 9vh;
+            position: absolute;
+        }
+        
+    }
+</style>
+<body>
+    <div class="home">
+        <div class="highway"></div>
+        <div class="city"></div>
+        <div class="car">
+            <img src="car_body.png" alt="">
+        </div>
+        <div class="wheel">
+            <img src="wheel.png" class="back-wheel">
+            <img src="wheel.png" class="front-wheel">
+        </div>
+    </div>
+</body>
+</html>
